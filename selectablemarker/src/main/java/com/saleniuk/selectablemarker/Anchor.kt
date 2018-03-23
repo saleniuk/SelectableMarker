@@ -1,4 +1,4 @@
-package com.saleniuk.selectablemarker.sample
+package com.saleniuk.selectablemarker
 
 import android.content.Context
 import android.graphics.Canvas
@@ -19,8 +19,14 @@ class Anchor : View {
         var desiredWidth = 1
         var desiredHeight = 1
 
-        desiredWidth = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, desiredWidth.toFloat(), resources.displayMetrics).toInt()
-        desiredHeight = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX, desiredHeight.toFloat(), resources.displayMetrics).toInt()
+        desiredWidth = TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_PX,
+                desiredWidth.toFloat(),
+                resources.displayMetrics).toInt()
+        desiredHeight = TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_PX,
+                desiredHeight.toFloat(),
+                resources.displayMetrics).toInt()
 
         super.onMeasure(desiredWidth, desiredHeight)
         setMeasuredDimension(desiredWidth, desiredHeight)
